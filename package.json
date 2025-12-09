@@ -21,7 +21,10 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
-    "qwik": "qwik"
+    "qwik": "qwik",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build"
   },
   "devDependencies": {
     "@builder.io/qwik": "^1.17.2",
@@ -39,5 +42,9 @@
     "undici": "*",
     "vite": "7.1.11",
     "vite-tsconfig-paths": "^4.2.1"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.9.1",
+    "cocoapods": "^0.0.0"
   }
 }

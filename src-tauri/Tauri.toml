@@ -1,0 +1,15 @@
+[build]
+dev-url = "http://localhost:3000"
+# start the dev server
+before-dev-command = "pnpm run dev"
+
+[bundle]
+active = true
+icon = ["icons/32x32.png"]
+
+[[app.windows]]
+title = "Exploration"
+
+[plugins.updater]
+pubkey = "updater pub key"
+endpoints = ["https://my.app.updater/{{target}}/{{current_version}}"]

@@ -3,6 +3,7 @@
 /lib
 /lib-types
 /server
+/src-tauri/target
 
 # Development
 node_modules
