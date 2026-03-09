@@ -24,7 +24,8 @@
     "qwik": "qwik",
     "tauri": "tauri",
     "tauri:dev": "tauri dev",
-    "tauri:build": "tauri build"
+    "tauri:build": "tauri build",
+    "gradle:init": "cd src-tauri/gen/android && ./gradlew --version"
   },
   "devDependencies": {
     "@builder.io/qwik": "^1.17.2",

@@ -1,0 +1,5 @@
+rootProject.name = 'tauri-exploration'
+
+// Android project lives here – open this folder in Android Studio for full module support:
+// File → Open → choose: tauri-exploration/src-tauri/gen/android
+includeBuild 'src-tauri/gen/android'

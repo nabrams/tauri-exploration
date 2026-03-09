@@ -1,6 +1,6 @@
 name: app
 options:
-  bundleIdPrefix: com.tauri.dev
+  bundleIdPrefix: com.natalie.soduku
   deploymentTarget:
     iOS: 14.0
 fileGroups: [../../src]
