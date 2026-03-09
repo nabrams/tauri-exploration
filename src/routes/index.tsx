@@ -1,25 +1,30 @@
-import { $, component$, useSignal } from "@builder.io/qwik";
+import { component$, useSignal } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import{ SodukuGrid } from "~/components/soduku-grid/soduku-grid";
 
 export default component$(() => {
   const greeting = useSignal<string>("");
 
-  const callTauri = $(async () => {
-    const { invoke } = await import("@tauri-apps/api/core");
-    const result = await invoke("greet");
-    console.log("Tauri response:", result);
-    greeting.value = String(result ?? "Command executed!");
-  });
+  // const callTauri = $(async () => {
+  //   const { invoke } = await import("@tauri-apps/api/core");
+  //   const result = await invoke("greet").then((result) => {
+  //     console.log("Tauri response:", result);
+  //     greeting.value = String(result ?? "Command executed!");
+  //   });
+  //   console.log("Tauri response:", result);
+  //   greeting.value = String(result ?? "Command executed!");
+  // });
 
   return (
     <>
-      <h1>Welcome to Natalie's Tauri Exploration App</h1>
+      <h1>Natalie's Soduku Generator</h1>
       <div>
-        Let's build something great together!
+        Let's play!
         <br />
-        <span style="font-size: 3em;">🧜‍♀️</span>
+
       </div>
-      <button onClick$={callTauri}>Call Tauri</button>
+      <SodukuGrid />
+
       {greeting.value && <p>From Tauri: {greeting.value}</p>}
     </>
   );

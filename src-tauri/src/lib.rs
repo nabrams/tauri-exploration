@@ -1,8 +1,8 @@
 
 
 #[tauri::command]
-fn greet() {
-  println!("I was invoked from JavaScript!");
+fn greet() -> String {
+  "Hello from Rust!".into()
 }
 
 
